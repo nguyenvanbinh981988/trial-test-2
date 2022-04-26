@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+</body>
+</html>
+<script>
+ class Rectangle {
+     x;
+     y;
+     height;
+     weight;
+     color;
+     constructor(x,y,weight,height,color) {
+         this.x = x;
+         this.y = y;
+         this.height = height;
+         this.weight = weight;
+         this.color = color
+     }
+
+     creatRectangle(){
+         let a = document.getElementById('myCanvas');
+         let ctx = a.getContext('2d');
+
+         ctx.fillStyle = this.color;
+         ctx.fillRect(this.x,this.y,this.height,this.weight);
+     }
+ }
+
+ let rectangle1 = new Rectangle(10,10,200,100,'#000000')
+ rectangle1.creatRectangle()
+</script>

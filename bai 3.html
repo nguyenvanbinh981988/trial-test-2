@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function checkChuoi(a,b) {
+        let check = false
+        for (let i = 0; i < b.length; i++) {
+            let str = []
+            if (a[0] === b[i]) {
+                for (let j = 0; j < a.length; j++) {
+                    str.push(b[i + j])
+                }
+            }
+            if (a === str.join('')) {
+                check = true
+                break
+            }
+        }
+        if (check){
+            document.write('Chuoi 1 nam trong chuoi 2')
+        } else {
+            document.write('Chuoi 1 ko nam trong chuoi 2')
+        }
+    }
+
+    let str1 = 'i love you'
+    let str2 = 'i want to say: i love you'
+    document.write('chuoi 1 :'  + str1 + '<br>' +'chuoi 2: '+str2 +'<br>')
+    checkChuoi(str1,str2)
+</script>
